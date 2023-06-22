@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -28,14 +27,14 @@
             <!--List all wallets were created by user.-->
             <div class="sidebar-item sidebar-item_shopee">
                 <span class="icon">
-                    <span class="material-symbols-outlined">trolley</span>
+                    <span class="material-symbols-outlined">shopping_cart</span>
                 </span>
                 <h2 class="txt">Shopee</h2>
             </div>
             
             <button class="sidebar-item addWallet">
                 <span class="addWalletIcon icon">
-                    <span class="material-symbols-outlined">add</span>
+                    <span class="material-symbols-outlined" style="font-size: 1.2em;">add</span>
                 </span>
             </button>
         </div>
@@ -43,23 +42,43 @@
                 
         <div class="rightApp">
             <div class="header">
-                <div class="header-right analyst-icon icon"></div>
+                <div class="header-right">
+                    <span class="icon analyst-icon">
+                        <span class="material-symbols-outlined" style="font-size: 2em;">bar_chart</span>
+                    </span>
+                </div>
                 <div class="header-left">
-                    <span class="lang icon"></span>
-                    <span class="learnMore icon"></span>
-                    <span class="icon theme"></span>
-                    <span class="icon notification"></span>
-                    <span class="icon user"></span>
+                    <span class="lang icon">
+                        <img width="30" height="30" src="https://img.icons8.com/color/48/usa-circular.png" alt="usa-circular"/>
+                    </span>
+                    <span class="learnMore icon">
+                        <span class="material-symbols-outlined" style="font-size: 2em;">help</span>
+                    </span>
+                    <span class="icon">
+                        <!--JS: If button is clicked, change innerText/innerHTML/textContent of span.theme = light_mode-->
+                        <span class="material-symbols-outlined theme" style="font-size: 2em;">dark_mode</span>
+                    </span>
+                    <span class="icon notification">
+                        <img src="./assets/Here/notification.svg" alt="" style="width: 26px; height: 26px;">
+                    </span>
+                    <span class="icon user">
+                        <img src="./assets/Here/user.svg" alt="" style="width: 26px; height: 26px; ">
+                    </span>
                 </div>
             </div>
             
             <div class="content">
+                <div class="space"></div>
                 <div class="transactions">
                     <div class="transactions-head">
                         <h1 class="transactions-title head-left transactions-head-right">Transactions</h1>
                         <div class="head-right">
                             <select class="timeSelection">Past month</select>
-                            <button class="addTransactionIcon icon"></button>
+                            <button class="addTransactionBtn">
+                                <span class="addTransactionIcon icon">
+                                    <span class="material-symbols-outlined">add</span>
+                                </span>
+                            </button>
                         </div>
                     </div>
                     

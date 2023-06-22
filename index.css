@@ -7,6 +7,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    width: 100vw;
+    background-color: rgb(247, 247, 247);
+}
+
 h1{
     font-size: 1.7em;
 }
@@ -26,7 +31,7 @@ h2{
 .sidebar{
     width: 70px;
     height: 100%;
-    position: fixed;
+    position:fixed;
     top:0;
     left:0;
     background-color: rgb(214, 236, 235);
@@ -130,18 +135,300 @@ h2{
     margin: 0px 10px;
 }
 
-/* 
-rightApp
-header
-header-right
-analyst-icon
-header-left
-lang
-learnMore
-theme
-notification
-user
-content
-transactions
-transactions-head
-transactions-title */
+/*RIGHT APP*/
+.rightApp {
+}
+
+/*HEADER*/
+div.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* background-color: antiquewhite; */
+    padding-left: 100px;
+    width: 100vw;
+}
+
+.header-right {
+    
+}
+
+.analyst-icon {
+
+}
+
+.header-left {
+    display: flex;
+    gap: 2.3vw;
+    flex-wrap: wrap;
+}
+
+.lang{
+    
+}
+
+.learnMore {
+
+}
+
+.theme{ 
+
+}
+
+.notification {
+
+}
+
+.user{
+    margin-right: 10px;
+}
+
+
+
+/*CONTENT*/
+
+.content {
+    margin-left: 255px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+}
+
+/*TRANSACTIONS*/
+.transactions {
+    width: 41vmax;
+    padding-right: 30px;
+}
+
+.transactions-head {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+}
+
+.transactions-title  {
+
+}
+
+.header {
+
+}
+
+.head-left {
+
+}
+
+.transactions-head-right {
+
+}
+
+.head-right {
+
+}
+
+.timeSelection {
+
+}
+
+.addTransactionBtn {
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 4px;
+}
+
+.addTransactionIcon {
+    font-size: 2em;
+    margin: auto;
+    display: flex;
+}
+
+.transactions-list {
+
+}
+
+.transactions-item {
+
+}
+
+.transaction-icon {
+
+}
+
+.transaction-content {
+
+}
+
+.transaction-time {
+
+}
+
+.transaction-money {
+
+}
+
+/*ANALYST*/
+.analyst {
+    width: 41vmax;
+}
+
+.analyst-head {
+
+}
+
+.analyst-title {
+
+}
+
+.head-left {
+
+}
+
+.timeSelection {
+
+}
+
+.head-right {
+
+}
+
+.analyst-head-right {
+
+}
+
+.mainWallet-card {
+
+}
+
+.mainWallet-right {
+
+}
+
+.card-right {
+
+}
+
+.mainWallet-title {
+
+}
+
+.cmt {
+
+}
+
+.mainWallet-left {
+
+}
+
+.card-left {
+
+}
+
+.mainWallet-balance {
+
+}
+
+.amountMoney {
+
+}
+
+.cards {
+
+}
+
+.card {
+
+}
+
+.income {
+
+}
+
+.income-above {
+
+}
+
+.card-above {
+
+}
+
+.income-title {
+
+}
+
+.income-below {
+
+}
+
+.card-below {
+
+}
+
+.income-percentage {
+
+}
+
+.card-percentage {
+
+}
+
+.outcome {
+
+}
+
+.outcome-above {
+
+}
+
+.outcome-title {
+
+}
+
+.outcome-below {
+
+}
+
+.outcome-percentage {
+
+}
+
+.debt {
+
+}
+
+.debt-above {
+
+}
+
+.debt-title {
+
+}
+
+.debt-below {
+
+}
+
+.debt-percentage {
+
+}
+
+.debtCollection {
+
+}
+
+.debtCollection-above {
+
+}
+
+.debtCollection-title {
+
+}
+
+.debtCollection-below {
+
+}
+
+.debtCollection-percentage {
+
+}
