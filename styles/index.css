@@ -31,7 +31,7 @@ h2{
 .sidebar{
     width: 70px;
     height: 100%;
-    position:fixed;
+    position: fixed;
     top:0;
     left:0;
     background-color: rgb(214, 236, 235);
