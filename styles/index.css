@@ -204,68 +204,6 @@ h2 {
 }
 
 .sidebar:hover .wallet-option .icon-container {
-    margin: 0px 12px;
-}
-
-
-/*HEADER*/
-.header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: rgb(136, 40, 31);
-    padding-left: 120px;
-    height: 60px;
-    width: 100vw;
-    position: fixed;
-}
-
-.header .options-container {
-    position: relative;
-    width: 32%;
-    background-color: rgb(168, 99, 183);
-    display: flex;
-    justify-content: space-around;
-}
-
-.header .options-container .option {
-    position: relative;
-    cursor: pointer;
-    background-color: rgb(99, 183, 138);
-    width: 36px;
-    border: none;
-}
-
-.header .options-container .option .option-modal {
-    position: absolute;
-    /* display: flex; */
-    display: none;
-    flex-direction: column;
-
-    background-color: rgb(153, 220, 223);
-    width: 200px;
-    height: 60px;
-    margin-top: 12px;
-    bottom: -80px;
-    left: -24px;
-}
-
-.header .options-container .option:hover .option-modal {
-    display: flex;
-}
-
-.header .options-container .option .option-modal.to-left {
-    /* display: flex; */
-    left: auto;
-    right: -24px;
-}
-
-.header .options-container .option .option-modal.to-middle {
-    /* display: flex; */
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
 	margin: 0px 12px;
 }
 
