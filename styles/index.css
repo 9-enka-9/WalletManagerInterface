@@ -23,6 +23,11 @@ h2 {
 }
 
 
+.hidden {
+    display: none !important;
+}
+
+
 /* SIDEBAR */
 .sidebar {
     width: 80px;
@@ -141,47 +146,71 @@ h2 {
 .header {
     position: fixed;
     display: flex;
+<<<<<<< HEAD
     justify-content: flex-end;
     padding: 10px;
     background-color: rgb(191, 152, 101);
     padding-left: 120px;
     height: 80px;
     width: 100vw;
+=======
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(136, 40, 31);
+    padding-left: 120px;
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+>>>>>>> 673bb60 (finish basic header layout)
 }
 
-.header-right {
-    
-}
-
-.analyst-icon {
-
-}
-
-.header-left {
+.header .options-container {
+    position: relative;
+    width: 32%;
+    background-color: rgb(168, 99, 183);
     display: flex;
-    gap: 2.3vw;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.lang {
-    
+.header .options-container .option {
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(99, 183, 138);
+    width: 36px;
+    border: none;
 }
 
-.learnMore {
+.header .options-container .option .option-modal {
+    position: absolute;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
 
+    background-color: rgb(153, 220, 223);
+    width: 200px;
+    height: 60px;
+    margin-top: 12px;
+    bottom: -80px;
+    left: -24px;
 }
 
-.theme { 
-
+.header .options-container .option:hover .option-modal {
+    display: flex;
 }
 
-.notification {
-
+.header .options-container .option .option-modal.to-left {
+    /* display: flex; */
+    left: auto;
+    right: -24px;
 }
 
-.user {
-    margin-right: 10px;
+.header .options-container .option .option-modal.to-middle {
+    /* display: flex; */
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 
 
 
