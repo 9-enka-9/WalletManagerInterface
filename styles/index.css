@@ -139,13 +139,14 @@ h2 {
 
 /*HEADER*/
 .header {
+    position: fixed;
     display: flex;
     justify-content: flex-end;
-    padding: 10px 0px;
+    padding: 10px;
     background-color: rgb(191, 152, 101);
     padding-left: 120px;
     height: 80px;
-    /* width: 100vw; */
+    width: 100vw;
 }
 
 .header-right {
