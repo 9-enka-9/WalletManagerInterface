@@ -4,48 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <div class="app">
+    <div class="overall-container">
+        <div class="header">
+            <button class="option">
+                <i class="icon option-icon"></i>
+                <div class="option-modal">
+                    <h4 class="option-modal-title">Modal Title</h4>
+                    <h4 class="option-modal-desc">Modal desription</h4>
+                </div>
+            </button>
+        </div>
+        
         <div class="sidebar">
-            <div class="title sidebar-item">
+            <div class="title">
                 <span class="title-icon icon">
                     <span class="material-symbols-outlined" style="font-size: 2em;">dashboard</span>
                 </span>
                 <h1 class="title-name">Dashboard</h1>
             </div>
-            <div class="sidebar-item sidebar-item_mainWallet">
-                <span class="mainWallet-icon icon">
+
+            <!--List all wallets were created by user.-->
+
+            <div class="wallet-option">
+                <span class="icon-container wallet-icon">
                     <span class="material-symbols-outlined">wallet</span>
                 </span>
-                <h2 class="mainWallet-txt txt">Main Wallet</h2>
-                <span class="mainWallet-adjustingIcon icon"></span>
+                <h3 class="wallet-name">Main Wallet</h3>
+                <span class="icon-container wallet-settings-icon">
+                    <span class="material-symbols-outlined">settings</span>
+                </span>
             </div>
             
-            <!--List all wallets were created by user.-->
-            <div class="sidebar-item sidebar-item_shopee">
-                <span class="icon">
+            <div class="wallet-option">
+                <span class="icon-container wallet-icon">
                     <span class="material-symbols-outlined">shopping_cart</span>
                 </span>
-                <h2 class="txt">Shopee</h2>
+                <h3 class="wallet-name">Shopee</h3>
+                <span class="icon-container wallet-settings-icon">
+                    <span class="material-symbols-outlined">settings</span>
+                </span>
+            </div>
+
+            <div class="wallet-option">
+                <span class="icon-container wallet-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </span>
+                <h3 class="wallet-name">Wallet 3</h3>
+                <span class="icon-container wallet-settings-icon">
+                    <span class="material-symbols-outlined">settings</span>
+                </span>
+            </div>
+
+            <div class="wallet-option">
+                <span class="icon-container wallet-icon">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </span>
+                <h3 class="wallet-name">Shopee</h3>
+                <span class="icon-container wallet-settings-icon">
+                    <span class="material-symbols-outlined">settings</span>
+                </span>
             </div>
             
-            <button class="sidebar-item addWallet">
+            <button class="wallet-option addWallet">
                 <span class="addWalletIcon icon">
-                    <span class="material-symbols-outlined" style="font-size: 1.2em;">add</span>
+                    <span class="material-symbols-outlined" style="font-size: inherit;">add</span>
                 </span>
             </button>
         </div>
         
-                
+        <div class="main-container">
+            <section class="transaction">
+
+            </section>
+        </div>
+
         <div class="rightApp">
             <div class="header">
                 <div class="header-right">
                     <span class="icon analyst-icon">
                         <span class="material-symbols-outlined" style="font-size: 2em;">bar_chart</span>
+						<p>RIGHTAPPP</p>
                     </span>
                 </div>
                 <div class="header-left">
@@ -55,7 +100,7 @@
                     <span class="learnMore icon">
                         <span class="material-symbols-outlined" style="font-size: 2em;">help</span>
                     </span>
-                    <span class="icon">
+                    <span class="icon-container wallet-icon">
                         <!--JS: If button is clicked, change innerText/innerHTML/textContent of span.theme = light_mode-->
                         <span class="material-symbols-outlined theme" style="font-size: 2em;">dark_mode</span>
                     </span>
@@ -113,7 +158,7 @@
                     
                     <div class="mainWallet-card">
                         <div class="mainWallet-right card-right">
-                            <span class="icon"></span>
+                            <span class="icon-container wallet-icon"></span>
                             <h2 class="mainWallet-title">Main Wallet</h2>
                             <span class="cmt">Current wallet</span>
                         </div>
@@ -127,13 +172,13 @@
                     <div class="cards">
                         <div class="card income">
                             <div class="income-above card-above">
-                                <span class="icon"></span>
+                                <span class="icon-container wallet-icon"></span>
                                 <h2 class="income-title">Income</h2>
                                 <span class="cmt">Current wallet</span>
                             </div>
                             <div class="income-below card-below">
                                 <div class="income-percentage card-percentage">
-                                    <span class="icon"></span>
+                                    <span class="icon-container wallet-icon"></span>
                                     20,7%
                                 </div>
                                 <span class="amountMoney">24,150,000đ</span>
@@ -141,13 +186,13 @@
                         </div>
                         <div class="card outcome">
                             <div class="outcome-above card-above">
-                                <span class="icon"></span>
+                                <span class="icon-container wallet-icon"></span>
                                 <h2 class="outcome-title">Outcome</h2>
                                 <span class="cmt">Current wallet</span>
                             </div>
                             <div class="outcome-below card-below">
                                 <div class="outcome-percentage card-percentage">
-                                    <span class="icon"></span>
+                                    <span class="icon-container wallet-icon"></span>
                                     20,7%
                                 </div>
                                 <span class="amountMoney">24,150,000đ</span>
@@ -155,13 +200,13 @@
                         </div>
                         <div class="card debt">
                             <div class="debt-above card-above">
-                                <span class="icon"></span>
+                                <span class="icon-container wallet-icon"></span>
                                 <h2 class="debt-title">Debt</h2>
                                 <span class="cmt">Current wallet</span>
                             </div>
                             <div class="debt-below card-below">
                                 <div class="debt-percentage card-percentage">
-                                    <span class="icon"></span>
+                                    <span class="icon-container wallet-icon"></span>
                                     20,7%
                                 </div>
                                 <span class="amountMoney">24,150,000đ</span>
@@ -169,13 +214,13 @@
                         </div> 
                         <div class="card debtCollection">
                             <div class="debtCollection-above card-above">
-                                <span class="icon"></span>
+                                <span class="icon-container wallet-icon"></span>
                                 <h2 class="debtCollection-title">Debt Collection</h2>
                                 <span class="cmt">Current wallet</span>
                             </div>
                             <div class="debtCollection-below card-below">
                                 <div class="debtCollection-percentage card-percentage">
-                                    <span class="icon"></span>
+                                    <span class="icon-container wallet-icon"></span>
                                     20,7%
                                 </div>
                                 <span class="amountMoney">24,150,000đ</span>

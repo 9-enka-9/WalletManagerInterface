@@ -1,153 +1,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*{
+* {
     box-sizing: border-box;
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+h1 {
+	font-size: 1.8em;
+}
+
+h2 {
+	font-size: 1.3em;
+}
+
+.overall-container {
+    display: flex;
+    height: 100vh;
     width: 100vw;
     background-color: rgb(247, 247, 247);
 }
 
-h1{
-    font-size: 1.7em;
-}
-
-h2{
-    font-size: 1.3em;
-}
-
-.app{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-}
-
 
 /* SIDEBAR */
-.sidebar{
-    width: 70px;
+.sidebar {
+    width: 80px;
     height: 100%;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background-color: rgb(214, 236, 235);
     display: flex;
     flex-direction: column;
-    gap:10px;
-    padding:0px 5px;
+    gap: 10px;
+    padding: 0px 8px;
     transition: 0.2s;
 }
 
-.sidebar-item{
-    padding: 0.8em;  
-    border-radius: 10px;
-    background-color: pink;
+.sidebar .icon-container {
+	background-color: blueviolet;
+	margin: 0px 12px;
+}
+
+.sidebar .title {
+    background-color: rgb(211, 45, 79);
+	display: flex;
+    justify-content: center;
+    padding: 0.6em;
+}
+
+.sidebar .title .title-icon {
+    display: flex;
+    align-items: center;
+    margin: 0px 12px;
+}
+
+.sidebar .title > .title-name {
+    margin: 0;
+    display: none;
+}
+
+.sidebar .wallet-option {
     display: flex;
     justify-content: center;
+	align-items: center;
     cursor: pointer;
     white-space: nowrap;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: rgb(175, 202, 143);
 }
 
-.title{
-    background-color:inherit;
-}
-
-
-.icon{
-    text-align: center;
-    
-}
-
-.title-icon{
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-}
-
-.title-name{
-    margin: 0;
-}
-
-.title-name, div.sidebar-item>.txt {
+.sidebar .wallet-option .wallet-name {
     display: none;
-    overflow: hidden;
 }
 
-.sidebar-item_mainWallet{
-
+.sidebar .wallet-option > .wallet-settings-icon{
+    display: none;
 }
 
-.mainWallet-icon{
-
-}
-
-.mainWallet-txt{
-
-}
-
-.mainWallet-adjustingIcon{
-
-}
-
-.sidebar-item_shopee{
-
-}
-
-.sidebar-item.addWallet{
-    display: flex;
+/* Adding new wallet button */
+.sidebar .wallet-option.addWallet {
     border: none;
-    padding: auto 0;  
+    background-color: brown;
+    width: fit-content;
+    margin: 0 auto;
 }
 
-.addWalletIcon{
-    font-size: 2em;
-    margin: auto;
-    border-radius: 10px;
-    display: flex;
+.sidebar .wallet-option.addWallet .addWalletIcon {
+    font-size: 1.6em;
+    background-color: aliceblue;
+    line-height: 0.8;
 }
 
-/*When sidebar is hovered*/
-.sidebar:hover{
-    width: 250px;
+.sidebar .wallet-option.addWallet .addWalletAction {
+	font-size: 1.3em;
+    background-color: rgb(189, 209, 169);
 }
 
-.sidebar:hover .title-name{
+
+/*Sidebar Hovered*/
+.sidebar:hover {
+    width: 240px;
+}
+
+.sidebar:hover > .title > .title-name {
     display: block;
 }
 
-.sidebar:hover .sidebar-item>.txt{
-    display: block;
+.sidebar:hover .title .title-icon {
+    margin-left: -4px;
 }
 
-.sidebar:hover .sidebar-item{
+.sidebar:hover .wallet-option {
     justify-content: flex-start;
 }
 
-.sidebar:hover .addWallet{
+.sidebar:hover > .wallet-option > .wallet-name {
+    display: block;
+	background-color: antiquewhite;
+}
+
+.sidebar .wallet-option:hover > .icon-container.wallet-settings-icon{
+    display: inline-block;
+    margin-left: auto; 
+    margin-right: 0px;
+}
+
+.sidebar:hover > .wallet-option > .addWallet {
     align-self: flex-start;
 }
 
-.sidebar:hover span.icon{
-    margin: 0px 10px;
+.sidebar:hover .wallet-option .icon-container {
+    margin: 0px 12px;
 }
 
-/*RIGHT APP*/
-.rightApp {
-}
 
 /*HEADER*/
-div.header {
+.header {
     display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /* background-color: antiquewhite; */
-    padding-left: 100px;
-    width: 100vw;
+    justify-content: flex-end;
+    padding: 10px 0px;
+    background-color: rgb(191, 152, 101);
+    padding-left: 120px;
+    height: 80px;
+    /* width: 100vw; */
 }
 
 .header-right {
@@ -164,7 +162,7 @@ div.header {
     flex-wrap: wrap;
 }
 
-.lang{
+.lang {
     
 }
 
@@ -172,7 +170,7 @@ div.header {
 
 }
 
-.theme{ 
+.theme { 
 
 }
 
@@ -180,14 +178,13 @@ div.header {
 
 }
 
-.user{
+.user {
     margin-right: 10px;
 }
 
 
 
 /*CONTENT*/
-
 .content {
     margin-left: 255px;
     display: flex;
@@ -207,30 +204,6 @@ div.header {
     padding-right: 70px;
 }
 
-.transactions-title  {
-
-}
-
-.header {
-
-}
-
-.head-left {
-
-}
-
-.transactions-head-right {
-
-}
-
-.head-right {
-
-}
-
-.timeSelection {
-
-}
-
 .addTransactionBtn {
     border-radius: 5px;
     border: 1px solid black;
@@ -244,191 +217,8 @@ div.header {
     display: flex;
 }
 
-.transactions-list {
-
-}
-
-.transactions-item {
-
-}
-
-.transaction-icon {
-
-}
-
-.transaction-content {
-
-}
-
-.transaction-time {
-
-}
-
-.transaction-money {
-
-}
 
 /*ANALYST*/
 .analyst {
     width: 41vmax;
-}
-
-.analyst-head {
-
-}
-
-.analyst-title {
-
-}
-
-.head-left {
-
-}
-
-.timeSelection {
-
-}
-
-.head-right {
-
-}
-
-.analyst-head-right {
-
-}
-
-.mainWallet-card {
-
-}
-
-.mainWallet-right {
-
-}
-
-.card-right {
-
-}
-
-.mainWallet-title {
-
-}
-
-.cmt {
-
-}
-
-.mainWallet-left {
-
-}
-
-.card-left {
-
-}
-
-.mainWallet-balance {
-
-}
-
-.amountMoney {
-
-}
-
-.cards {
-
-}
-
-.card {
-
-}
-
-.income {
-
-}
-
-.income-above {
-
-}
-
-.card-above {
-
-}
-
-.income-title {
-
-}
-
-.income-below {
-
-}
-
-.card-below {
-
-}
-
-.income-percentage {
-
-}
-
-.card-percentage {
-
-}
-
-.outcome {
-
-}
-
-.outcome-above {
-
-}
-
-.outcome-title {
-
-}
-
-.outcome-below {
-
-}
-
-.outcome-percentage {
-
-}
-
-.debt {
-
-}
-
-.debt-above {
-
-}
-
-.debt-title {
-
-}
-
-.debt-below {
-
-}
-
-.debt-percentage {
-
-}
-
-.debtCollection {
-
-}
-
-.debtCollection-above {
-
-}
-
-.debtCollection-title {
-
-}
-
-.debtCollection-below {
-
-}
-
-.debtCollection-percentage {
-
 }
