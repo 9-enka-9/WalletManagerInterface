@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -16,31 +16,97 @@ h2 {
 }
 
 .overall-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(247, 247, 247);
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	background-color: rgb(247, 247, 247);
 }
 
 
 .hidden {
-    display: none !important;
+	display: none !important;
 }
+
+
+/*HEADER*/
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: rgb(136, 40, 31);
+	padding-left: 120px;
+	height: 60px;
+	width: 100vw;
+	position: fixed;
+}
+
+.page-header .options-container {
+	position: relative;
+	width: 32%;
+	background-color: rgb(168, 99, 183);
+	display: flex;
+	justify-content: space-around;
+}
+
+.page-header .options-container .option {
+	position: relative;
+	cursor: pointer;
+	background-color: rgb(99, 183, 138);
+	width: 36px;
+	border: none;
+}
+
+.page-header .options-container .option .option-modal {
+	position: absolute;
+	/* display: flex; */
+	display: none;
+	flex-direction: column;
+
+	background-color: rgb(153, 220, 223);
+	width: 200px;
+	height: 60px;
+	margin-top: 12px;
+	bottom: -80px;
+	left: -24px;
+}
+
+.page-header .options-container .option:hover .option-modal {
+	display: flex;
+}
+
+.page-header .options-container .option .option-modal.to-left {
+	/* display: flex; */
+	left: auto;
+	right: -24px;
+}
+
+.page-header .options-container .option .option-modal.to-middle {
+	/* display: flex; */
+	bottom: -80px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+
+
+
+
 
 
 /* SIDEBAR */
 .sidebar {
-    width: 80px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(214, 236, 235);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0px 8px;
-    transition: 0.2s;
+	width: 80px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgb(214, 236, 235);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 0px 8px;
+	transition: 0.2s;
 }
 
 .sidebar .icon-container {
@@ -48,93 +114,93 @@ h2 {
 	margin: 0px 12px;
 }
 
-.sidebar .title {
-    background-color: rgb(211, 45, 79);
+.sidebar > .title {
+	background-color: rgb(211, 45, 79);
 	display: flex;
-    justify-content: center;
-    padding: 0.6em;
+	justify-content: center;
+	padding: 0.6em;
 }
 
-.sidebar .title .title-icon {
-    display: flex;
-    align-items: center;
-    margin: 0px 12px;
+.sidebar > .title .title-icon {
+	display: flex;
+	align-items: center;
+	margin: 0px 12px;
 }
 
-.sidebar .title > .title-name {
-    margin: 0;
-    display: none;
+.sidebar > .title > .title-name {
+	margin: 0;
+	display: none;
 }
 
 .sidebar .wallet-option {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 	align-items: center;
-    cursor: pointer;
-    white-space: nowrap;
-    border-radius: 12px;
-    padding: 12px;
-    background-color: rgb(175, 202, 143);
+	cursor: pointer;
+	white-space: nowrap;
+	border-radius: 12px;
+	padding: 12px;
+	background-color: rgb(175, 202, 143);
 }
 
 .sidebar .wallet-option .wallet-name {
-    display: none;
+	display: none;
 }
 
 .sidebar .wallet-option > .wallet-settings-icon{
-    display: none;
+	display: none;
 }
 
 /* Adding new wallet button */
 .sidebar .wallet-option.addWallet {
-    border: none;
-    background-color: brown;
-    width: fit-content;
-    margin: 0 auto;
+	border: none;
+	background-color: brown;
+	width: fit-content;
+	margin: 0 auto;
 }
 
 .sidebar .wallet-option.addWallet .addWalletIcon {
-    font-size: 1.6em;
-    background-color: aliceblue;
-    line-height: 0.8;
+	font-size: 1.6em;
+	background-color: aliceblue;
+	line-height: 0.8;
 }
 
 .sidebar .wallet-option.addWallet .addWalletAction {
 	font-size: 1.3em;
-    background-color: rgb(189, 209, 169);
+	background-color: rgb(189, 209, 169);
 }
 
 
 /*Sidebar Hovered*/
 .sidebar:hover {
-    width: 240px;
+	width: 240px;
 }
 
 .sidebar:hover > .title > .title-name {
-    display: block;
+	display: block;
 }
 
-.sidebar:hover .title .title-icon {
-    margin-left: -4px;
+.sidebar:hover > .title .title-icon {
+	margin-left: -4px;
 }
 
 .sidebar:hover .wallet-option {
-    justify-content: flex-start;
+	justify-content: flex-start;
 }
 
 .sidebar:hover > .wallet-option > .wallet-name {
-    display: block;
+	display: block;
 	background-color: antiquewhite;
 }
 
 .sidebar .wallet-option:hover > .icon-container.wallet-settings-icon{
-    display: inline-block;
-    margin-left: auto; 
-    margin-right: 0px;
+	display: inline-block;
+	margin-left: auto; 
+	margin-right: 0px;
 }
 
 .sidebar:hover > .wallet-option > .addWallet {
-    align-self: flex-start;
+	align-self: flex-start;
 }
 
 .sidebar:hover .wallet-option .icon-container {
@@ -200,46 +266,87 @@ h2 {
     bottom: -80px;
     left: 50%;
     transform: translateX(-50%);
+	margin: 0px 12px;
 }
 
 
 
 
-/*CONTENT*/
-.content {
-    margin-left: 255px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 4vh;
+
+
+
+
+
+
+/* MAIN CONTAINER */
+.main-container {
+	width: 100%;
+	padding-top: 80px;
+	background-color: rgb(193, 235, 200);
 }
+
+
 
 /*TRANSACTIONS*/
-.transactions {
-    width: 41vmax;
-    padding-right: 30px;
+.transactions-container {
+	display: flex;
+	flex-direction: column;
+	width: 40vmax;
+	min-height: 200px;
+	margin: auto;
+	background-color: rgb(212, 252, 252);
 }
 
-.transactions-head {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 70px;
+.transactions-container > .header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 8px;
+	background-color: cornsilk;
 }
+
+.transactions-container > .header > .actions-tab {
+	width: 200px;
+	background-color: rgb(248, 174, 255);
+}
+
+.transactions-container > .transactions-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 8px;
+	background-color: rgb(97, 140, 107);
+}
+
+.transactions-list > .transaction {
+	background-color: rgb(255, 242, 243);
+	display: flex;
+	justify-content: flex-start;
+}
+
+.transactions-list > .transaction > p.amount{
+	margin-left: auto
+}
+
+
+
+
 
 .addTransactionBtn {
-    border-radius: 5px;
-    border: 1px solid black;
-    background-color: white;
-    padding: 4px;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color: white;
+	padding: 4px;
 }
 
 .addTransactionIcon {
-    font-size: 2em;
-    margin: auto;
-    display: flex;
+	font-size: 2em;
+	margin: auto;
+	display: flex;
 }
 
 
 /*ANALYST*/
 .analyst {
-    width: 41vmax;
+	width: 41vmax;
 }
