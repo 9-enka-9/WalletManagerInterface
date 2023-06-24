@@ -146,14 +146,6 @@ h2 {
 .header {
     position: fixed;
     display: flex;
-<<<<<<< HEAD
-    justify-content: flex-end;
-    padding: 10px;
-    background-color: rgb(191, 152, 101);
-    padding-left: 120px;
-    height: 80px;
-    width: 100vw;
-=======
     justify-content: space-between;
     padding: 10px;
     background-color: rgb(136, 40, 31);
@@ -161,7 +153,6 @@ h2 {
     height: 60px;
     width: 100vw;
     position: fixed;
->>>>>>> 673bb60 (finish basic header layout)
 }
 
 .header .options-container {
