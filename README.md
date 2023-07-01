@@ -1,0 +1,1 @@
+Sameple link: https://9-enka-9.github.io/WalletManagerInterface/

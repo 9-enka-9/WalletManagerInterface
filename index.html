@@ -120,11 +120,13 @@
 			</div>
 			
 			<button class="wallet-option addWallet">
-				<span class="addWalletIcon icon">
+				<span class="addWalletIcon icon-container">
 					<span class="material-symbols-outlined" style="font-size: inherit;">add</span>
 				</span>
 			</button>
 		</div>
+		
+		<!-- div.content -->
 		
 		<div class="main-container">
 			<section class="transactions-container">
@@ -138,12 +140,16 @@
 							<option value="202304">April, 2023</option>
 							<option value="202303">March, 2023</option>
 						</select>
-						<button class="add-transaction">+</button>
+						<button class="add-transaction">
+							<span class=" icon-container">
+								<span class="material-symbols-outlined" style="font-size: inherit; margin:auto;">add</span>
+							</span>
+						</button>
 					</div>
 				</div>
 				<div class="transactions-list">
 					<div class="transaction">
-						<div class="icon">Icon</div>
+						<div class="icon-container">Icon</div>
 						<div class="extra-info">
 							<h3 class="name">Trans 1</h3>
 							<p class="date">June 24th, 2023</p>
@@ -153,7 +159,7 @@
 					</div>
 
 					<div class="transaction">
-						<div class="icon">Icon</div>
+						<div class="icon-container">Icon</div>
 						<div class="extra-info">
 							<h3 class="name">Trans 2</h3>
 							<p class="date">June 24th, 2023</p>
@@ -163,7 +169,7 @@
 					</div>
 
 					<div class="transaction">
-						<div class="icon">Icon</div>
+						<div class="icon-container">Icon</div>
 						<div class="extra-info">
 							<h3 class="name">Trans 3</h3>
 							<p class="date">June 24th, 2023</p>
@@ -173,7 +179,7 @@
 					</div>
 
 					<div class="transaction">
-						<div class="icon">Icon</div>
+						<div class="icon-container">Icon</div>
 						<div class="extra-info">
 							<h3 class="name">Trans 4</h3>
 							<p class="date">June 24th, 2023</p>
@@ -183,124 +189,93 @@
 					</div>
 				</div>
 			</section>
-		</div>
-
-		<div class="rightApp hidden">
-			<div class="content">
-				<div class="transactions">
-					<div class="transactions-head">
-						<h1 class="transactions-title head-left transactions-head-right">Transactions</h1>
-						<div class="head-right">
-							<select class="timeSelection">Past month</select>
-							<button class="addTransactionBtn">
-								<span class="addTransactionIcon icon">
-									<span class="material-symbols-outlined">add</span>
-								</span>
-							</button>
-						</div>
+			
+			<section class="analyst-container">
+				<div class="analyst-head">
+					<h3 class="analyst-title head-left">Analyst</h3>
+					<div class="actions-tab">
+						<select name="analyst-month-selector" id="analyst-month-selector">
+							<option value="202307">July, 2023</option>
+							<option value="202306">June, 2023</option>
+							<option value="202305">May, 2023</option>
+							<option value="202304">April, 2023</option>
+							<option value="202303">March, 2023</option>
+						</select>
 					</div>
-					
-					<!--List item-->
-					<ul class="transactions-list">
-						<li class="transactions-item">
-							<div class="transaction-icon icon "></div>
-							<div class="transaction-content">
-								<h2 class="transaction-title">Shopee</h2>
-								<p class="transaction-time">Sunday, June 18, 2023 </p>
-							</div>
-							<div class="transaction-money">325,000đ</div>
-						</li>
-						<li class="transactions-item">
-							<div class="transaction-icon icon "></div>
-							<div class="transaction-content">
-								<h2 class="transaction-title">Vegetables</h2>
-								<p class="transaction-time">Sunday, June 18, 2023 </p>
-							</div>
-							<div class="transaction-money">325,000đ</div>
-						</li>
-					</ul>
-				
 				</div>
 				
-				<div class="analyst">
-					<div class="analyst-head">
-						<h1 class="analyst-title head-left">Analyst</h1>
-						<select class="timeSelection head-right analyst-head-right">Past month</select>
+				<div class="mainWallet-card">
+					<div class="mainWallet-right card-right">
+						<span class="icon-container wallet-icon"></span>
+						<h3 class="mainWallet-title">Main Wallet</h3>
+						<span class="cmt">Current wallet</span>
 					</div>
-					
-					<div class="mainWallet-card">
-						<div class="mainWallet-right card-right">
+					<div class="mainWallet-left card-left">
+						<span class="mainWallet-balance">Balance</span>
+						<span class="amountMoney">24,150,000đ</span>
+					</div>
+				</div>
+				
+				
+				<div class="cards">
+					<div class="card income">
+						<div class="income-above card-above">
 							<span class="icon-container wallet-icon"></span>
-							<h2 class="mainWallet-title">Main Wallet</h2>
+							<h3 class="income-title">Income</h3>
 							<span class="cmt">Current wallet</span>
 						</div>
-						<div class="mainWallet-left card-left">
-							<span class="mainWallet-balance">Balance</span>
+						<div class="income-below card-below">
+							<div class="income-percentage card-percentage">
+								<span class="icon-container wallet-icon"></span>
+								20,7%
+							</div>
 							<span class="amountMoney">24,150,000đ</span>
-						</div>
+						</div>  
 					</div>
-					
-					
-					<div class="cards">
-						<div class="card income">
-							<div class="income-above card-above">
-								<span class="icon-container wallet-icon"></span>
-								<h2 class="income-title">Income</h2>
-								<span class="cmt">Current wallet</span>
-							</div>
-							<div class="income-below card-below">
-								<div class="income-percentage card-percentage">
-									<span class="icon-container wallet-icon"></span>
-									20,7%
-								</div>
-								<span class="amountMoney">24,150,000đ</span>
-							</div>  
+					<div class="card outcome">
+						<div class="outcome-above card-above">
+							<span class="icon-container wallet-icon"></span>
+							<h3 class="outcome-title">Outcome</h3>
+							<span class="cmt">Current wallet</span>
 						</div>
-						<div class="card outcome">
-							<div class="outcome-above card-above">
+						<div class="outcome-below card-below">
+							<div class="outcome-percentage card-percentage">
 								<span class="icon-container wallet-icon"></span>
-								<h2 class="outcome-title">Outcome</h2>
-								<span class="cmt">Current wallet</span>
+								20,7%
 							</div>
-							<div class="outcome-below card-below">
-								<div class="outcome-percentage card-percentage">
-									<span class="icon-container wallet-icon"></span>
-									20,7%
-								</div>
-								<span class="amountMoney">24,150,000đ</span>
-							</div>  
+							<span class="amountMoney">24,150,000đ</span>
+						</div>  
+					</div>
+					<div class="card debt">
+						<div class="debt-above card-above">
+							<span class="icon-container wallet-icon"></span>
+							<h3 class="debt-title">Debt</h3>
+							<span class="cmt">Current wallet</span>
 						</div>
-						<div class="card debt">
-							<div class="debt-above card-above">
+						<div class="debt-below card-below">
+							<div class="debt-percentage card-percentage">
 								<span class="icon-container wallet-icon"></span>
-								<h2 class="debt-title">Debt</h2>
-								<span class="cmt">Current wallet</span>
+								20,7%
 							</div>
-							<div class="debt-below card-below">
-								<div class="debt-percentage card-percentage">
-									<span class="icon-container wallet-icon"></span>
-									20,7%
-								</div>
-								<span class="amountMoney">24,150,000đ</span>
-							</div>  
-						</div> 
-						<div class="card debtCollection">
-							<div class="debtCollection-above card-above">
-								<span class="icon-container wallet-icon"></span>
-								<h2 class="debtCollection-title">Debt Collection</h2>
-								<span class="cmt">Current wallet</span>
-							</div>
-							<div class="debtCollection-below card-below">
-								<div class="debtCollection-percentage card-percentage">
-									<span class="icon-container wallet-icon"></span>
-									20,7%
-								</div>
-								<span class="amountMoney">24,150,000đ</span>
-							</div>  
+							<span class="amountMoney">24,150,000đ</span>
+						</div>  
+					</div> 
+					<div class="card debtCollection">
+						<div class="debtCollection-above card-above">
+							<span class="icon-container wallet-icon"></span>
+							<h3 class="debtCollection-title">Debt Collection</h3>
+							<span class="cmt">Current wallet</span>
 						</div>
+						<div class="debtCollection-below card-below">
+							<div class="debtCollection-percentage card-percentage">
+								<span class="icon-container wallet-icon"></span>
+								20,7%
+							</div>
+							<span class="amountMoney">24,150,000đ</span>
+						</div>  
 					</div>
 				</div>
-			</div>
+			</section>
 		</div>
 	</div>
 </body>

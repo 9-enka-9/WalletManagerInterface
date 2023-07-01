@@ -221,6 +221,10 @@ h2 {
 	width: 100%;
 	padding-top: 80px;
 	background-color: rgb(193, 235, 200);
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 10vmax;
+	justify-content: space-evenly;
 }
 
 
@@ -229,9 +233,9 @@ h2 {
 .transactions-container {
 	display: flex;
 	flex-direction: column;
-	width: 40vmax;
+	width: 41vmax;
 	min-height: 200px;
-	margin: auto;
+	padding: 0 30px;
 	background-color: rgb(212, 252, 252);
 }
 
@@ -243,10 +247,25 @@ h2 {
 	background-color: cornsilk;
 }
 
-.transactions-container > .header > .actions-tab {
+
+
+.add-transaction {
+	border-radius: 5px;
+	border: solid black 1px;
+	padding: 5px;
+	background-color: white;
+}
+
+.add-transaction>.icon-container {
+	display: flex;
+	align-items: center;
+	background-color: white;
+}
+
+/* .transactions-container > .header > .actions-tab {
 	width: 200px;
 	background-color: rgb(248, 174, 255);
-}
+} */
 
 .transactions-container > .transactions-list {
 	display: flex;
@@ -262,29 +281,18 @@ h2 {
 	justify-content: flex-start;
 }
 
-.transactions-list > .transaction > p.amount{
+.transactions-list > .transaction > p.amount {
 	margin-left: auto
 }
 
 
 
-
-
-.addTransactionBtn {
-	border-radius: 5px;
-	border: 1px solid black;
-	background-color: white;
-	padding: 4px;
-}
-
-.addTransactionIcon {
-	font-size: 2em;
-	margin: auto;
-	display: flex;
-}
-
-
 /*ANALYST*/
-.analyst {
+.analyst-container {
 	width: 41vmax;
+	background-color: azure;
 }
+
+/*
+
+*/
